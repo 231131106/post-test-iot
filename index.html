@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Greenhouse Dashboard</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="loginForm" class="login-container">
+      <div class="login-card">
+        <div class="icon-header">
+          <i class="fa-solid fa-leaf"></i>
+        </div>
+        <h2>Greenhouse Monitor</h2>
+        <p>Silakan masuk untuk memantau tanaman</p>
+
+        <div class="input-group">
+          <i class="fa-solid fa-envelope"></i>
+          <input type="email" id="email" placeholder="Email Address" />
+        </div>
+        <div class="input-group">
+          <i class="fa-solid fa-lock"></i>
+          <input type="password" id="password" placeholder="Password" />
+        </div>
+
+        <button id="loginBtn">Masuk Dashboard</button>
+        <p id="errorMsg" class="error-text"></p>
+      </div>
+    </div>
+
+    <div id="dashboard" class="dashboard-container" style="display: none">
+      <nav class="navbar">
+        <div class="nav-brand">
+          <i class="fa-solid fa-seedling"></i> Smart Greenhouse
+        </div>
+        <button id="logoutBtn" class="btn-logout">
+          <i class="fa-solid fa-right-from-bracket"></i> Logout
+        </button>
+      </nav>
+
+      <div class="content-wrapper">
+        <header class="header-section">
+          <h1>Real-time Monitoring</h1>
+          <p>Status terkini sensor IoT</p>
+        </header>
+
+        <div class="cards-grid">
+          <div class="card sensor-card">
+            <div class="card-icon soil">
+              <i class="fa-solid fa-droplet"></i>
+            </div>
+            <div class="card-info">
+              <h3>Kelembaban Tanah</h3>
+              <div class="value" id="soilMoisture">-- %</div>
+              <span class="status-badge" id="soilStatus">Menunggu data...</span>
+            </div>
+          </div>
+
+          <div class="card sensor-card">
+            <div class="card-icon light">
+              <i class="fa-solid fa-sun"></i>
+            </div>
+            <div class="card-info">
+              <h3>Intensitas Cahaya</h3>
+              <div class="value" id="lightLevel">-- %</div>
+              <span class="status-badge" id="lightStatus"
+                >Menunggu data...</span
+              >
+            </div>
+          </div>
+
+          <div class="card sensor-card">
+            <div class="card-icon motion">
+              <i class="fa-solid fa-person-walking"></i>
+            </div>
+            <div class="card-info">
+              <h3>Sensor Gerak (PIR)</h3>
+              <div class="value" id="motion">--</div>
+              <span class="status-badge" id="motionStatus"
+                >Menunggu data...</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
