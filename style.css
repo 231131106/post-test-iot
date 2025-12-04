@@ -23,7 +23,7 @@ body {
   height: 100vh;
 }
 
-/* --- Login Styles --- */
+/* Bagian Login */
 .login-container {
   display: flex;
   justify-content: center;
@@ -107,7 +107,7 @@ body {
   margin-top: 1rem;
 }
 
-/* --- Dashboard Styles --- */
+/* Bagian Dashboard */
 .navbar {
   background: white;
   padding: 1rem 2rem;
@@ -216,7 +216,6 @@ body {
   background: #eee;
 }
 
-/* Status Colors (controlled by JS) */
 .status-good {
   background-color: #e8f5e9;
   color: #2e7d32;
